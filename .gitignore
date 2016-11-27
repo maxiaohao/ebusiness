@@ -6,3 +6,9 @@ target/
 /taotao-rest/src/main/resources/properties/db.properties
 /taotao-rest/src/main/resources/properties/resource.properties
 /taotao-portal/src/main/resources/properties/resource.properties
+/RemoteSystemsTempFiles
+/.metadata
+/**/META-INF
+/**/.settings
+/**/.project
+/**/.classpath
