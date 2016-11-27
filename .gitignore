@@ -1,4 +1,8 @@
 target/
-/taotao-manager/taotao-manager-web/src/main/resources/properties
-/taotao-rest/src/main/resources/properties
-/taotao-portal/src/main/resources/properties
+/taotao-manager/taotao-manager-web/src/main/resources/properties/client.conf
+/taotao-manager/taotao-manager-web/src/main/resources/properties/db.properties
+/taotao-manager/taotao-manager-web/src/main/resources/properties/resource.properties
+/taotao-rest/src/main/resources/properties/client.conf
+/taotao-rest/src/main/resources/properties/db.properties
+/taotao-rest/src/main/resources/properties/resource.properties
+/taotao-portal/src/main/resources/properties/resource.properties
