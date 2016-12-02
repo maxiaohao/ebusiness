@@ -68,7 +68,7 @@ TIPS:
 | (your host)      | 192.168.25.1     |                    |                                                     |
 
 
-### hosts ###
+# hosts #
 You may need to append the following into the hosts (e.g. /etc/hosts) file on your host(laptop) so that you could access the containers (vms) using hostname instead of ip address.
 
 ```
@@ -97,6 +97,7 @@ You may need to append the following into the hosts (e.g. /etc/hosts) file on yo
 192.168.25.2 manager.taotao.com
 192.168.25.2 image.taotao.com
 ```
+
 
 # Performance #
 With all the 14 containers running idle (for now the 3 dummy solr ones don't do anything), a less than 1% cpu + 1.5 GB memory is consumed on the host. All images occupy a total of less than 1 GB of disk space taking advantage of Docker's layered fs. 
