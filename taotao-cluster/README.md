@@ -96,6 +96,7 @@ TIPS:
 192.168.25.2 sso.taotao.com
 192.168.25.2 order.taotao.com
 192.168.25.2 manager.taotao.com
+192.168.25.2 image.taotao.com
 ```
 
 # Performance #
