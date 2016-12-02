@@ -69,7 +69,8 @@ TIPS:
 
 
 ### hosts ###
-- You may need to append the following into the hosts (e.g. /etc/hosts) file on your host(laptop) so that you could access the containers (vms) using hostname instead of ip address.
+You may need to append the following into the hosts (e.g. /etc/hosts) file on your host(laptop) so that you could access the containers (vms) using hostname instead of ip address.
+
 ```
 192.168.25.1 laptop #(an alias of your host)
 192.168.25.133 fastdfs-tracker
