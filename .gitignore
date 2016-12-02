@@ -13,11 +13,6 @@ RemoteSystemsTempFiles
 .~*
 ~$*
 
-# Package Files #
-*.jar
-*.war
-*.ear
-
 # Project artifacts
 .classpath
 .project
