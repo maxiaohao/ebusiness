@@ -71,7 +71,6 @@ TIPS:
 ### hosts ###
 - You may need to append the following into the hosts (e.g. /etc/hosts) file on your host(laptop) so that you could access the containers (vms) using hostname instead of ip address.
 ```
-# ebd hosts
 192.168.25.1 laptop #(an alias of your host)
 192.168.25.133 fastdfs-tracker
 192.168.25.134 fastdfs-storage1
@@ -88,7 +87,6 @@ TIPS:
 192.168.25.21 tomcat1
 192.168.25.22 tomcat2
 
-# ebd domains
 192.168.25.2 taotao.com
 192.168.25.2 www.taotao.com
 192.168.25.2 rest.taotao.com
