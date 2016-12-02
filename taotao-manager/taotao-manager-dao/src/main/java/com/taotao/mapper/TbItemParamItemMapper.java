@@ -21,6 +21,8 @@ public interface TbItemParamItemMapper {
     List<TbItemParamItem> selectByExample(TbItemParamItemExample example);
 
     TbItemParamItem selectByPrimaryKey(Long id);
+    
+    TbItemParamItem selectByItemId(Long itemId);
 
     int updateByExampleSelective(@Param("record") TbItemParamItem record, @Param("example") TbItemParamItemExample example);
 

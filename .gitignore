@@ -1,14 +1,34 @@
-target/
-/taotao-manager/taotao-manager-web/src/main/resources/properties/client.conf
-/taotao-manager/taotao-manager-web/src/main/resources/properties/db.properties
-/taotao-manager/taotao-manager-web/src/main/resources/properties/resource.properties
-/taotao-rest/src/main/resources/properties/client.conf
-/taotao-rest/src/main/resources/properties/db.properties
-/taotao-rest/src/main/resources/properties/resource.properties
-/taotao-portal/src/main/resources/properties/resource.properties
-/RemoteSystemsTempFiles
-/.metadata
+RemoteSystemsTempFiles
+
 /**/META-INF
-/**/.settings
-/**/.project
-/**/.classpath
+
+*.class
+*~
+*.diff
+*.patch
+*.swp
+*.out
+*.log
+*.pdb
+.~*
+~$*
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Project artifacts
+.classpath
+.project
+.settings
+.gradle
+
+# Folders #
+build/
+bin/
+private_doc/
+tmp/
+target/
+generated/
+

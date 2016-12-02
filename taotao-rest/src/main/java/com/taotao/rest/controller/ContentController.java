@@ -2,6 +2,8 @@ package com.taotao.rest.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +17,7 @@ import com.taotao.rest.service.ContentService;
 
 @Controller
 public class ContentController {
+	static Logger log = LoggerFactory.getLogger(ContentController.class.getName());
 
 	@Autowired
 	private ContentService contentService;
@@ -24,7 +27,23 @@ public class ContentController {
 	public TaotaoResult getContentList(@PathVariable Long cid) {
 		try {
 			List<TbContent> list = contentService.getContentList(cid);
+			
+			log.debug("入参是:"+cid);
+			log.debug("查询到数据的list大小："+list.size());
+			
 			return TaotaoResult.ok(list);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+		}
+	}
+	
+	@RequestMapping("/sync/content/{cid}")
+	@ResponseBody
+	public TaotaoResult sysncContent(@PathVariable Long cid) {
+		try {
+			TaotaoResult result = contentService.syncContent(cid);
+			return result;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));

@@ -39,7 +39,7 @@ public class ContentServiceImpl implements ContentService {
 		//取data属性，内容列表
 		List<TbContent> contentList = (List<TbContent>) taotaoResult.getData();
 		//把内容列表转换成AdNode列表
-		List<AdNode> resultList = new ArrayList<AdNode>();
+		List<AdNode> resultList = new ArrayList<>();
 		for (TbContent tbContent : contentList) {
 			AdNode node = new AdNode();
 			node.setHeight(240);

@@ -1,0 +1,16 @@
+# this Dockerfile must be run from 'taotao-cluster' directory using "-f" in order to access the third-party files
+FROM ebd-img-common
+
+ENV INST_STUFF /tmp/install-stuff
+ENV INST_TMP /tmp/install-tmp
+
+COPY ./third-party $INST_STUFF
+COPY ./cluster-conf/solr-install.sh $INST_STUFF
+
+RUN /bin/bash $INST_STUFF/solr-install.sh
+
+COPY ./cluster-conf/solr-schema.xml /opt/solrhome/collection1/conf/schema.xml
+
+RUN rm -rf $INST_STUFF $INST_TMP
+
+#ENTRYPOINT ["", "", ""]

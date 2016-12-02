@@ -1,9 +1,4 @@
 package com.taotao.utils;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 import org.csource.fastdfs.ClientGlobal;
 import org.csource.fastdfs.StorageClient;
 import org.csource.fastdfs.StorageServer;
@@ -40,6 +35,8 @@ public class FastDFSClient {
 		
 		String[] strings = storageClient.upload_file(bytes,extName,null);
 		String result = strings[0]+"/"+strings[1];
+		System.out.println("上传结果:"+result);
+		
 		return result;
 	}
 }
