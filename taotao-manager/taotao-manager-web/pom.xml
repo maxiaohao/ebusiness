@@ -57,6 +57,21 @@
                     <path>/</path>
                 </configuration>
             </plugin>
+            <!-- alternative jetty plugin -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.19.v20160908</version>
+                <configuration>
+                    <httpConnector>
+                        <host>0.0.0.0</host>
+                        <port>8084</port>
+                    </httpConnector>
+                    <reload>manual</reload>
+                    <stopPort>38084</stopPort>
+                    <stopKey>foo</stopKey>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
