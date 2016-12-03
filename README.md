@@ -15,7 +15,7 @@ taotao-cluster中的脚本可用于快速在本机上搭建本项目所需要的
 
 如果你已有Docker 1.10+, 可考虑自行构建并运行整套环境, 详细步骤及规格说明见taotao-cluster/README.md
 
-如果你使用Windows, 或者想把环境部署到vsphere中, 建议直接导入预先装好Docker的ova镜像(CentOS7), 下载地址: (待更新)
+如果你使用Windows, 或者想把环境部署到vsphere中, 建议直接导入预先装好Docker的ova镜像(CentOS7), 下载地址: http://cloud.189.cn/t/vUbUJvrea2Yz, 或临时链接: http://cloud.189.cn/t/Zj2ieuauiY7f, 密码5025
 此虚拟机镜像可导入到Virtualbox或vmware中, 下文以Virtualbox为例, 简述镜像的使用步骤:
 - 下载ova文件并导入为一台新的虚拟机
 - 注意此虚拟机为双网卡, 网卡1是NAT(方便访问外网), 网卡2为HostOnly网络(启用DHCP), 如果虚拟机不是部署在本机电脑(例如,要部署到vsphere中), 则网卡2应该是Bridge模式
