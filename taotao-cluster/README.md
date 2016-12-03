@@ -16,7 +16,7 @@ TIPS:
 - `docker ps -a` lists all containers.
 - sshd are also enabled in the containers so that you could ssh to them (`root/password`) in case you access from some other hosts in the private network.
 - There are some `delete-*.sh` and `destroy-*.sh` scripts you can make use of if you need to clear up things quickly.
-- To skip to run some of the containers, an environmental variable `SKIP_EBD_HOSTS` can be used before you run the containers, e.g. `export SKIP_EBD_HOSTS="fastdfs-storage2 tomcat1 tomcat2" && sudo -E ./run-containers.sh`
+- To skip to run some of the containers, an environmental variable `SKIP_EBD_HOSTS` can be used before you run the containers, e.g. `export SKIP_EBD_HOSTS="tomcat1 tomcat2" && sudo -E ./run-containers.sh`
 
 
 # Specs #
