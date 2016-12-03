@@ -1,6 +1,8 @@
 package com.taotao.service.impl;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -10,6 +12,9 @@ import com.taotao.service.PictureService;
 
 @Service
 public class PictureServiceImpl implements PictureService {
+	
+	Logger logger = Logger.getLogger(PictureServiceImpl.class);
+	
 
 	@Value("${IMAGE_SERVER_BASE_URL}")
 	private String IMAGE_SERVER_BASE_URL;
@@ -28,10 +33,16 @@ public class PictureServiceImpl implements PictureService {
 			String originalFilename = picFile.getOriginalFilename();
 			//取扩展名不要“.”
 			String extName = originalFilename.substring(originalFilename.lastIndexOf(".") + 1);
-			FastDFSClient client = new FastDFSClient("classpath:properties/client.conf");
+			
+			ClassPathResource resource= new ClassPathResource("properties/client.conf");
+			String path=resource.getFile().getAbsolutePath();
+			logger.debug("配置文件:"+path);
+			FastDFSClient client = new FastDFSClient(path);
+			//this.getClass().getR
 			String url = client.uploadFile(picFile.getBytes(), extName);
 			//String url = client.uploadFile(originalFilename, extName);
 			url = IMAGE_SERVER_BASE_URL+url;
+			logger.debug("图片路径:"+url);
 			//把url响应给客户端
 			result.setError(0);
 			result.setUrl(url);

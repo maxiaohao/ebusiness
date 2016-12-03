@@ -15,6 +15,7 @@ public class FastDFSClient {
 		if(conf.contains("classpath")){
 			conf =conf.replace("classpath:", this.getClass().getResource("/").getPath());
 		}
+	
 		ClientGlobal.init(conf);
 		//ClientGlobal.init("F:\\taotao\\taotao-manager\\taotao-manager-web\\src\\main\\resources\\properties\\client.conf");
 		trackerClient = new TrackerClient();
