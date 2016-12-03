@@ -62,7 +62,7 @@ TIPS:
 | redis4           | 192.168.25.154   | redis (6379)      |                                                     |
 | redis5           | 192.168.25.155   | redis (6379)      |                                                     |
 | redis6           | 192.168.25.156   | redis (6379)      |                                                     |
-| solr             | 192.168.25.161   | solr (8080)       |  single node setup                                  |
+| solr             | 192.168.25.161   | solr (8080)       |  single node setup, on http://solr:8080/solr        |
 | tomcat1          | 192.168.25.21    | 6 tomcats: rest(8081), portal(8082), search(8083), manager(8084), sso(8085), order(8086)    | tomcat admin/password: tomcat/tomcat     |
 | tomcat2          | 192.168.25.22    | replica of tomcat1 |                                                     |
 | (your host)      | 192.168.25.1     |                    |                                                     |
