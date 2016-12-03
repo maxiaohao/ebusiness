@@ -27,3 +27,7 @@ tmp/
 target/
 generated/
 
+
+.metadata
+.mymetadata
+.recommenders
