@@ -7,7 +7,7 @@ taotao-cluster中的脚本可用于快速在本机上搭建本项目所需要的
 - nginx
 - redis (6台)
 - solr
-- tomcat (2个, 占内存多, 仅用作发布, 开发调试时暂不开)
+- tomcat (2台, 占内存多, 仅用作最后发布, 开发调试时不开)
 上述集群中的"主机"均处于同一个私有网络`192.168.25.0/24`之中. 除去2*6=12个tomcat实例不开, 集群整体内存消耗不到800M.
 
 
@@ -23,12 +23,13 @@ taotao-cluster中的脚本可用于快速在本机上搭建本项目所需要的
 - 虚拟机中运行ifconfig看一下网卡2的IP
 - 从你的本机新建一条静态路由, 以便访问到虚拟机内部的`192.168.25.0/24`网络: `route add 192.168.25.0 mask 255.255.255.0 网卡2的IP`, 例如我的Virtualbox分配虚拟机网卡2的IP为192.168.56.101, 则`route add 192.168.25.0 mask 255.255.255.0 192.168.56.101`.
 - 虚拟机中启动集群:
+
 ```
 cd /opt/taotao-cluster
 export SKIP_EBD_HOSTS="tomcat1 tomcat2" #跳过两台tomcat服务器不开
 ./run-containers.sh
 ```
-- 另: 销毁集群的命令 `./destroy-containers.sh`
+- 另: 销毁集群的命令: `./destroy-containers.sh`
 - 修改本机hosts文件, 加入:
 
 ```
@@ -65,4 +66,4 @@ export SKIP_EBD_HOSTS="tomcat1 tomcat2" #跳过两台tomcat服务器不开
 mvn tomcat7:run
 ...
 ```
-注: taotao-*中各种服务的连接配置都是使用机器名的, 这样做的好处是, 只要修改你的hosts文件中对应的ip就能使用到其他环境运行.
+注: taotao-*中各种服务的连接配置都是使用机器名的, 这样做的好处是, 只要修改你的hosts文件中对应的ip就能切换到其他环境运行.
