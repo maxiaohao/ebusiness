@@ -13,12 +13,12 @@ taotao-cluster中的脚本可用于快速在本机上搭建本项目所需要的
 
 ## 2. 搭建本地集群的步骤 ##
 
-如果你已有Docker 1.10+, 可考虑自行构建并运行整套环境, 详细说明见taotao-cluster/README.md
+如果你已有Docker 1.10+, 可考虑自行构建并运行整套环境, 详细步骤及规格说明见taotao-cluster/README.md
 
-如果你使用Windows, 或者想把环境部署到vshphere中, 建议直接导入预先装好Docker的ova镜像(CentOS7), 下载地址: (待更新)
+如果你使用Windows, 或者想把环境部署到vsphere中, 建议直接导入预先装好Docker的ova镜像(CentOS7), 下载地址: (待更新)
 此虚拟机镜像可导入到Virtualbox或vmware中, 下文以Virtualbox为例, 简述镜像的使用步骤:
 - 下载ova文件并导入为一台新的虚拟机
-- 注意此虚拟机为双网卡, 网卡1是NAT(方便访问外网), 网卡2为HostOnly网络(启用DHCP)
+- 注意此虚拟机为双网卡, 网卡1是NAT(方便访问外网), 网卡2为HostOnly网络(启用DHCP), 如果虚拟机不是部署在本机电脑(例如,要部署到vsphere中), 则网卡2应该是Bridge模式
 - 启动虚拟机, 控制台用户名/密码登录: root/password
 - 虚拟机中运行ifconfig看一下网卡2的IP
 - 从你的本机新建一条静态路由, 以便访问到虚拟机内部的`192.168.25.0/24`网络: `route add 192.168.25.0 mask 255.255.255.0 网卡2的IP`, 例如我的Virtualbox分配虚拟机网卡2的IP为192.168.56.101, 则`route add 192.168.25.0 mask 255.255.255.0 192.168.56.101`.
