@@ -15,7 +15,7 @@ TIPS:
 - `docker images` lists all images.
 - `docker ps -a` lists all containers.
 - sshd are also enabled in the containers so that you could ssh to them (`root/password`) in case you access from some other hosts in the private network.
-- There are some `delete-*.sh` and `kill-*.sh` scripts you can make use of if you need to clear up things quickly.
+- There are some `delete-*.sh` and `destroy-*.sh` scripts you can make use of if you need to clear up things quickly.
 - To skip to run some of the containers, an environmental variable `SKIP_EBD_HOSTS` can be used before you run the containers, e.g. `export SKIP_EBD_HOSTS="fastdfs-storage2 tomcat1 tomcat2" && sudo -E ./run-containers.sh`
 
 
@@ -54,7 +54,7 @@ TIPS:
 | fastdfs-tracker  | 192.168.25.133   | tracker (22122)    |                                                     |
 | fastdfs-storage1 | 192.168.25.134   | storage 1 (22122) + nginx (80)      |                                    |
 | fastdfs-storage2 | 192.168.25.135   | storage 2 (22122) + nginx (80)      |                                    |
-| mysql            | 192.168.25.11    | empty mysql (3306)  | need to init db on container start                 |
+| mysql            | 192.168.25.11    | mysql (3306)       | db name: taotao, user/pass: taotao/taotao           |
 | nginx            | 192.168.25.2     | 1) virtual-hosting all domains like search.taotao.com, sso.taotao.com, etc.(forwarding to specific tomcat instance per domain name); 2) Load balancing tomcats ranging on tomcat1 and tomcat2; 3) Listen on port 80   |      |
 | redis1           | 192.168.25.151   | redis (6379)      | need syncing of data to mysql, including on delete? |
 | redis2           | 192.168.25.152   | redis (6379)      |                                                     |
