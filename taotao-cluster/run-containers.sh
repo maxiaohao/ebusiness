@@ -170,7 +170,7 @@ fi
 
 
 # start redis-cluster on redis1
-cmd1="echo 'yes' | /opt/redis/redis-trib.rb create --replicas 1 $HOST_REDIS1:6379 $HOST_REDIS2:6379 $HOST_REDIS3:6379 $HOST_REDIS4:6379 $HOST_REDIS5:6379 $HOST_REDIS6:6379"
+cmd1="echo 'yes' | /opt/redis/redis-trib.rb create --replicas 1 $IP_REDIS1:6379 $IP_REDIS2:6379 $IP_REDIS3:6379 $IP_REDIS4:6379 $IP_REDIS5:6379 $IP_REDIS6:6379"
 docker exec $HOST_REDIS1 sh -c "$cmd1 > /opt/redis/cluster.log 2>&1"
 
 
