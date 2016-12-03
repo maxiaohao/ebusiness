@@ -170,8 +170,8 @@ fi
 
 
 # start redis-cluster on redis1
-cmd1="echo 'yes' | /opt/redis/redis-trib.rb create --replicas 1 $HOST_REDIS1:6379 $HOST_REDIS2:6379 $HOST_REDIS3:6379 $HOST_REDIS4:6379 $HOST_REDIS5:6379 $HOST_REDIS6:6379 > /opt/redis/cluster.log 2>&1"
-docker exec $HOST_REDIS1 sh -c $cmd1
+cmd1="echo 'yes' | /opt/redis/redis-trib.rb create --replicas 1 $HOST_REDIS1:6379 $HOST_REDIS2:6379 $HOST_REDIS3:6379 $HOST_REDIS4:6379 $HOST_REDIS5:6379 $HOST_REDIS6:6379"
+docker exec $HOST_REDIS1 sh -c "$cmd1 > /opt/redis/cluster.log 2>&1"
 
 
 if [ "$(echo $SKIP_EBD_HOSTS | grep -F $HOST_SOLR)" = "" ] ; then
