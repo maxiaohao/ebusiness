@@ -56,7 +56,7 @@ TIPS:
 | fastdfs-storage2 | 192.168.25.135   | storage 2 (22122) + nginx (80)      |                                    |
 | mysql            | 192.168.25.11    | mysql (3306)       | db name: taotao, user/pass: taotao/taotao           |
 | nginx            | 192.168.25.2     | 1) virtual-hosting all domains like search.taotao.com, sso.taotao.com, etc.(forwarding to specific tomcat instance per domain name); 2) Load balancing tomcats ranging on tomcat1 and tomcat2; 3) Listen on port 80   |      |
-| redis1           | 192.168.25.151   | redis (6379)      | need syncing of data to mysql, including on delete? |
+| redis1           | 192.168.25.151   | redis (6379)      | cluster is started on this node and log can be found in /opt/redis |
 | redis2           | 192.168.25.152   | redis (6379)      |                                                     |
 | redis3           | 192.168.25.153   | redis (6379)      |                                                     |
 | redis4           | 192.168.25.154   | redis (6379)      |                                                     |
