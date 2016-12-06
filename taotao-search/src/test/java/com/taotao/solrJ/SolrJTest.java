@@ -7,13 +7,11 @@ import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 import org.apache.solr.common.SolrInputDocument;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class SolrJTest {
 
 
-	@Ignore
 	@Test
 	public void testSolrJ() throws Exception {
 		//创建连接
@@ -30,7 +28,6 @@ public class SolrJTest {
 		solrServer.commit();
 	}
 
-    @Ignore
 	@Test
 	public void testQuery() throws Exception {
 		//创建连接
