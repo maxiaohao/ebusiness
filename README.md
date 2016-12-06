@@ -65,6 +65,7 @@ export SKIP_EBD_HOSTS="tomcat1 tomcat2" #跳过两台tomcat服务器不开
 
 ## 3. 本机启动/调试taotao-*的各个webapp ##
 ```
+cd taotao-xxx
 mvn tomcat7:run
 ...
 ```
@@ -75,13 +76,12 @@ mvn tomcat7:run
 mvn clean package -Dmaven.test.skip=true
 ```
 
-## 5. 导入各tomcat-*到eclipse ##
+## 5. 导入各taotao-*到eclipse ##
 ```
-# 以taotao-search为例
-cd tomcat-search
+cd taotao-xxx
 mvn eclipse:clean eclipse:eclipse
 ```
-然后在eclipse中导入tomcat-search
+然后在eclipse中导入taotao-xxx
 
 
 ## 6. 重建集群Docker镜像 ##
