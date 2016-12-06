@@ -5,4 +5,9 @@ if [ "$(/usr/bin/whoami)" != "root" ] ; then
     exit 1
 fi
 
-docker ps -a | grep "ebd-img-" | grep -v grep | awk '{printf "%s ",$1}' | xargs docker rm -f
+CONTAINERS=`docker ps -a | grep "ebd-img-" | grep -v grep | awk '{printf "%s ",$1}'`
+
+if [ "$CONTAINERS" != "" ] ; then
+    xargs docker rm -f $CONTAINERS
+fi
+

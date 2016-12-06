@@ -5,4 +5,9 @@ if [ "$(/usr/bin/whoami)" != "root" ] ; then
     exit 1
 fi
 
-docker images | grep "ebd-img-" | grep -v "ebd-img-common" | grep -v grep | awk '{printf "%s ",$1}' | xargs docker rmi
+CLUSTER_IMGS=`docker images | grep "ebd-img-" | grep -v "ebd-img-common" | grep -v grep | awk '{printf "%s ",$1}'`
+
+if [ "$CLUSTER_IMGS" != "" ]; then
+    xargs docker rmi $CLUSTER_IMGS
+fi
+
