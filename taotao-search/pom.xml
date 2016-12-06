@@ -72,6 +72,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
         <!-- MySql -->
         <dependency>
@@ -147,3 +148,4 @@
         </plugins>
     </build>
 </project>
+
