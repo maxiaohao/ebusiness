@@ -9,7 +9,7 @@ PROJ_ROOT=$(cd `dirname $0`;pwd)
 
 NETWORK_NAME="ebd-network"
 
-HOST_LAPTOP="laptop"
+HOST_LAPTOP="taotao-cluster"
 HOST_FASTDFS_TRACKER="fastdfs-tracker"
 HOST_FASTDFS_STORAGE1="fastdfs-storage1"
 HOST_FASTDFS_STORAGE2="fastdfs-storage2"
