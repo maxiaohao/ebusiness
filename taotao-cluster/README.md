@@ -4,7 +4,7 @@
 # Quick Start #
 These scripts help to create a dozen of containers (as vms) along with your host in a private network utilizing the development of taotao
 ```
-./create-network.sh
+./create-network.sh         # before creating the virtual network you need to turn on iptabes and after that you need to turn iptables off
 ./create-img-common.sh      # this will take 5 or 10 mins (to install dependencies from yum repo)
 ./create-imgs-cluster.sh    # build the 6 images, taking no more than 5 mins
 ./run-containers.sh
@@ -72,10 +72,10 @@ TIPS:
 You may need to append the following into the hosts (e.g. /etc/hosts) file on your host(laptop) so that you could access the containers (vms) using hostname instead of ip address.
 
 ```
-192.168.25.1 laptop #(an alias of your host)
+192.168.25.1 taotao-cluster #(an alias of your host)
 192.168.25.133 fastdfs-tracker
 192.168.25.134 fastdfs-storage1
-192.168.25.135 fastdfs-storage1
+192.168.25.135 fastdfs-storage2
 192.168.25.11 mysql
 192.168.25.2 nginx
 192.168.25.151 redis1

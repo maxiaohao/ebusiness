@@ -36,7 +36,7 @@ export SKIP_EBD_HOSTS="tomcat1 tomcat2" #跳过两台tomcat服务器不开
 192.168.25.1 taotao-cluster
 192.168.25.133 fastdfs-tracker
 192.168.25.134 fastdfs-storage1
-192.168.25.135 fastdfs-storage1
+192.168.25.135 fastdfs-storage2
 192.168.25.11 mysql
 192.168.25.2 nginx
 192.168.25.151 redis1
