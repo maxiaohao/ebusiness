@@ -8,6 +8,6 @@ fi
 CONTAINERS=`docker ps -a | grep "ebd-img-" | grep -v grep | awk '{printf "%s ",$1}'`
 
 if [ "$CONTAINERS" != "" ] ; then
-    xargs docker rm -f $CONTAINERS
+    docker rm -fv $CONTAINERS
 fi
 
