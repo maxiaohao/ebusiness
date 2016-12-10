@@ -3,13 +3,13 @@
  */
 function logout(){
 	var _ticket = $.cookie("TT_TOKEN");
-	return location.href="http://localhost:8084/user/logout/"+_ticket;
+	return location.href="http://sso.taotao.com/user/logout/"+_ticket;
 }
 function login() {
-    return location.href = "http://localhost:8084/user/showLogin";
+    return location.href = "http://sso.taotao.com/user/showLogin";
 }
 function regist() {
-    return location.href = "http://localhost:8084/user/showRegister";
+    return location.href = "http://sso.taotao.com/user/showRegister";
 }
 function createCookie(a, b, c, d) {
     var d = d ? d : "/";

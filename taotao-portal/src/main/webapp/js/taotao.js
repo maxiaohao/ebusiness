@@ -5,7 +5,7 @@ var TT = TAOTAO = {
 			return ;
 		}
 		$.ajax({
-			url : "http://localhost:8084/user/token/" + _ticket,
+			url : "http://sso.taotao.com/user/token/" + _ticket,
 			dataType : "jsonp",
 			type : "GET",
 			success : function(data){
@@ -25,7 +25,7 @@ function checkLogout(){
 		return ;
 	}
 	$.ajax({
-		url : "http://localhost:8084/user/logout/" + _ticket,
+		url : "http://sso.taotao.com/user/logout/" + _ticket,
 		dataType : "jsonp",
 		type : "GET",
 		success : function(data){
@@ -39,7 +39,7 @@ function checkLogout(){
 
 function checkLogoutTest(){
 	var _ticket = $.cookie("TT_TOKEN");
-	return location.href="http://localhost:8084/user/logout/"+_ticket;
+	return location.href="http://sso.taotao.com/user/logout/"+_ticket;
 }
 
 $(function(){
