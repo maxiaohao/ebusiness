@@ -263,27 +263,26 @@ pageConfig.DATA_MScroll =[
 <div class="w w1" data-fid="0" id="electronics">
 <div class="m m1 catalogue" data-lazyload="1">
 <div class="mt ld">
-<div class="floor"><b class="fixpng b b1"></b><b class="fixpng b b2"></b><b class="b b3">1F</b><b class="fixpng b4"></b></div>
-<h2>家电通讯</h2>
+<h2>快速通道</h2>
 </div>
 <div class="mc">
 <div class="style1">
 <ul class="lh" clstag="homepage|keycount|home2013|18a">
 	<li><a href="#">手机</a></li>
-	<li><a href="#">空调</a></li>
+	<li><a href="#">毛衣</a></li>
 	<li><a href="#">手机配件</a></li>
 	<li><a href="#">平板电视</a></li>
-	<li><a href="#">话费补贴</a></li>
-	<li><a href="#">冰箱</a></li>
-	<li><a href="#">生活电器</a></li>
+	<li><a href="#">电信话费</a></li>
+	<li><a href="#">取暖电器</a></li>
+	<li><a href="#">女装</a></li>
 	<li><a href="#">洗衣机</a></li>
-	<li><a href="#">厨房电器</a></li>
+	<li><a href="#">全球购</a></li>
 	<li><a href="#">热水器</a></li>
-	<li><a href="#">个护健康</a></li>
-	<li><a href="#">烟机/灶具</a></li>
+	<li><a href="#">奢侈大牌</a></li>
+	<li><a href="#">个护化妆</a></li>
 	<li><a href="#">五金家装</a></li>
-	<li><a href="#">家庭影院</a></li>
-	<li><a href="#">酒柜冷柜</a></li>
+	<li><a href="#">智能生活</a></li>
+	<li><a href="#">食品饮料</a></li>
 	<li><a href="#">汽车用品</a></li>
 </ul>
 <span clstag="homepage|keycount|home2013|18b">
