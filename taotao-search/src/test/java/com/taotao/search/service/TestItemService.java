@@ -9,8 +9,9 @@ public class TestItemService extends BaseTest{
 	@Autowired(required=true)
 	ItemService itemService;
 	
-	
+	@Test
 	public void testImportItems(){
+		/*
 		try {
 			itemService.importItems();
 			System.out.println("全部商品导入成功!");
@@ -18,6 +19,7 @@ public class TestItemService extends BaseTest{
 			
 			e.printStackTrace();
 		}
+		*/
 		
 	}
 	
