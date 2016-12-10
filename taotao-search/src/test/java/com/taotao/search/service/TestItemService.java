@@ -9,7 +9,7 @@ public class TestItemService extends BaseTest{
 	@Autowired(required=true)
 	ItemService itemService;
 	
-	@Test
+	
 	public void testImportItems(){
 		try {
 			itemService.importItems();
