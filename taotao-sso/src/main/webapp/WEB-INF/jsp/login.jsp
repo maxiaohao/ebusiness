@@ -11,7 +11,7 @@
 <body>
 <div class="w">
     <div id="logo">
-    	<a href="http://www.taotao.com" clstag="passport|keycount|login|01">
+    	<a href="#" clstag="passport|keycount|login|01">
     		<img src="/images/taotao-logo.gif" alt="淘淘" width="170" height="60"/>
     	</a><b></b>
    	</div>

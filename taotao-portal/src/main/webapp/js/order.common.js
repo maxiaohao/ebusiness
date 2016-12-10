@@ -261,8 +261,8 @@ function OrderAppConfig(){
 OrderAppConfig.Domain = "http://"+window.location.host;
 OrderAppConfig.DynamicDomain = "http://"+window.location.host+"/dynamic";
 OrderAppConfig.AsyncDomain = "http://"+window.location.host+"/async";
-OrderAppConfig.LoginUrl = "http://passport.jd.com/new/login.aspx?ReturnUrl="+OrderAppConfig.Domain+"/order/getOrderInfo.action";
-OrderAppConfig.LoginLocUrl = "http://passport.jd.com/new/login.aspx?ReturnUrl="+OrderAppConfig.Domain+"/order/getLocOrderInfo.action";
+OrderAppConfig.LoginUrl = "#"+OrderAppConfig.Domain+"/order/getOrderInfo.action";
+OrderAppConfig.LoginLocUrl = "#"+OrderAppConfig.Domain+"/order/getLocOrderInfo.action";
 OrderAppConfig.Module_Consignee = "consignee";
 OrderAppConfig.Module_PayAndShip = "payment-ship";
 OrderAppConfig.Module_Shipment = "shipment";

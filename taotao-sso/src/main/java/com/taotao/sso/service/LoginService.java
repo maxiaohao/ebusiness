@@ -7,4 +7,6 @@ import com.taotao.common.pojo.TaotaoResult;
 
 public interface LoginService {
 	TaotaoResult login(String username, String password, HttpServletRequest request, HttpServletResponse response);
+	
+	TaotaoResult logout(String token, HttpServletRequest request, HttpServletResponse response);
 }

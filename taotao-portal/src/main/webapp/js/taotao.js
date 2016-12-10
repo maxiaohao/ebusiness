@@ -11,12 +11,35 @@ var TT = TAOTAO = {
 			success : function(data){
 				if(data.status == 200){
 					var username = data.data.username;
-					var html = username + "，欢迎来到淘淘！<a href=\"http://www.taotao.com/user/logout.html\" class=\"link-logout\">[退出]</a>";
+					var html = username + "，欢迎您来到淘淘！<a href=\"javascript:checkLogout()\" class=\"link-logout\">[退出]</a>";
 					$("#loginbar").html(html);
 				}
 			}
 		});
 	}
+}
+
+function checkLogout(){
+	var _ticket = $.cookie("TT_TOKEN");
+	if(!_ticket){
+		return ;
+	}
+	$.ajax({
+		url : "http://localhost:8084/user/logout/" + _ticket,
+		dataType : "jsonp",
+		type : "GET",
+		success : function(data){
+			if(data.status == 200){
+				var html = "<a href=\"javascript:login()\">[登录]</a>&nbsp;<a href=\"javascript:regist()\">[免费注册]</a>";
+				$("#loginbar").html(html);
+			}
+		}
+	});
+}
+
+function checkLogoutTest(){
+	var _ticket = $.cookie("TT_TOKEN");
+	return location.href="http://localhost:8084/user/logout/"+_ticket;
 }
 
 $(function(){

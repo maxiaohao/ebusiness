@@ -33,13 +33,13 @@ public class LoginServiceImpl implements LoginService {
 	private String REDIS_SESSION_KEY;
 	@Value("${REDIS_SESSION_EXPIRE}")
 	private Integer REDIS_SESSION_EXPIRE;
-	
-	private static String TT_TOKEN="TT_TOKEN";
-	
+
+	private static String TT_TOKEN = "TT_TOKEN";
+
 	@Override
 	public TaotaoResult login(String username, String password, HttpServletRequest request, HttpServletResponse response) {
-		
-		//有效性验证
+
+		// 有效性验证
 		if (StringUtils.isBlank(username) || StringUtils.isBlank(password)) {
 			return TaotaoResult.build(400, "有户名和密码不能为空");
 		}
@@ -50,23 +50,31 @@ public class LoginServiceImpl implements LoginService {
 		if (list == null || list.isEmpty()) {
 			return TaotaoResult.build(400, "用户名或密码错误");
 		}
-		//判断密码是否正确
+		// 判断密码是否正确
 		TbUser user = list.get(0);
 		if (!DigestUtils.md5DigestAsHex(password.getBytes()).equals(user.getPassword())) {
 			return TaotaoResult.build(400, "用户名或密码错误");
 		}
-		//生成token
+		// 生成token
 		UUID uuid = UUID.randomUUID();
 		String token = uuid.toString();
-		//把用户信息写入redis
-		//把用户的密码清空，为了安全。
+		// 把用户信息写入redis
+		// 把用户的密码清空，为了安全。
 		user.setPassword(null);
 		jedisClient.set(REDIS_SESSION_KEY + ":" + token, JsonUtils.objectToJson(user));
 		jedisClient.expire(REDIS_SESSION_KEY + ":" + token, REDIS_SESSION_EXPIRE);
-		//把token写入cookie
+		// 把token写入cookie
 		CookieUtils.setCookie(request, response, TT_TOKEN, token);
-		//返回token
+		// 返回token
 		return TaotaoResult.ok(token);
+	}
+
+	@Override
+	public TaotaoResult logout(String token, HttpServletRequest request, HttpServletResponse response) {
+		jedisClient.del(REDIS_SESSION_KEY + ":" + token);
+	//	CookieUtils.deleteCookie(request, response, TT_TOKEN);
+
+		return TaotaoResult.ok();
 	}
 
 }
