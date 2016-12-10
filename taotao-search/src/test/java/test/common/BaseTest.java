@@ -11,7 +11,7 @@ import org.springframework.util.Log4jConfigurer;
 
 @ContextConfiguration({
 	"/spring/applicationContext-*.xml"})
-public class BaseTest extends AbstractJUnit4SpringContextTests{
+public abstract class BaseTest extends AbstractJUnit4SpringContextTests{
 	
 	static { 
 	      try { 
