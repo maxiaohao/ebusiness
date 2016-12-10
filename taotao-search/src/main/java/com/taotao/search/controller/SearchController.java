@@ -23,7 +23,7 @@ public class SearchController {
 			@RequestParam(defaultValue="1")Integer page, 
 			@RequestParam(defaultValue="30")Integer rows) {
 		/*
-		 * http://localhost:8083/search/q?keyword=%E6%89%8B%E6%9C%BA&page=1&rows=10
+		 * http://search.taotao.com:8083/search/q?keyword=%E6%89%8B%E6%9C%BA&page=1&rows=10
 		 * */
 		try {
 			//转换字符集
