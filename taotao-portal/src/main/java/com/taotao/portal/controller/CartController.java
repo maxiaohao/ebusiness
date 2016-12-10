@@ -22,6 +22,7 @@ public class CartController {
 	@Autowired
 	private CartService cartService;
 	
+	@SuppressWarnings("unused")
 	@RequestMapping("/cart/add/{itemId}")
 	public String addCart(@PathVariable Long itemId, Integer num,
 			HttpServletResponse response, HttpServletRequest request) {
