@@ -42,10 +42,10 @@ public class ItemCatServiceImpl implements ItemCatService {
 			//如果是父节点
 			if (tbItemCat.getIsParent()) {
 				CatNode node = new CatNode();
-				node.setUrl("/products/"+tbItemCat.getId()+".html");
+				node.setUrl("#");
 				//如果当前节点为第一级节点
 				if (tbItemCat.getParentId() == 0) {
-					node.setName("<a href='/products/"+tbItemCat.getId()+".html'>"+tbItemCat.getName()+"</a>");
+					node.setName("<a href='#'>"+tbItemCat.getName()+"</a>");
 				} else {
 					node.setName(tbItemCat.getName());
 				}
@@ -54,7 +54,7 @@ public class ItemCatServiceImpl implements ItemCatService {
 				resultList.add(node);
 			} else {
 				//如果是叶子节点
-				String item = "/products/"+tbItemCat.getId()+".html|" + tbItemCat.getName();
+				String item = "#|" + tbItemCat.getName();
 				resultList.add(item);
 			}
 		}
