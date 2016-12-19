@@ -8,6 +8,13 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.impl.Log4jLoggerFactory;
+
+
+
 
 /**
  * 
@@ -15,7 +22,10 @@ import javax.servlet.http.HttpServletResponse;
  *
  */
 public final class CookieUtils {
-
+	
+	//private final static Logger                               LOG      = Log4jLoggerFactory.
+	protected  static Log logger = LogFactory.getLog(CookieUtils.class);
+	
     /**
      * 得到Cookie的值, 不编码
      * 
@@ -149,7 +159,7 @@ public final class CookieUtils {
                 cookie.setMaxAge(cookieMaxage);
             if (null != request) {// 设置域名的cookie
             	String domainName = getDomainName(request);
-            	System.out.println(domainName);
+            	System.out.println("domain:"+domainName);
                 if (!"localhost".equals(domainName)) {
                 	cookie.setDomain(domainName);
                 }
@@ -179,7 +189,7 @@ public final class CookieUtils {
                 cookie.setMaxAge(cookieMaxage);
             if (null != request) {// 设置域名的cookie
             	String domainName = getDomainName(request);
-            	System.out.println(domainName);
+            	System.out.println("domain:"+domainName);
                 if (!"localhost".equals(domainName)) {
                 	cookie.setDomain(domainName);
                 }
@@ -198,6 +208,9 @@ public final class CookieUtils {
         String domainName = null;
 
         String serverName = request.getRequestURL().toString();
+        System.out.println("serverName:"+serverName);
+        logger.info("serverName:"+serverName);
+        
         if (serverName == null || serverName.equals("")) {
             domainName = "";
         } else {
@@ -209,10 +222,12 @@ public final class CookieUtils {
             int len = domains.length;
             if (len > 3) {
                 // www.xxx.com.cn
-                domainName = "." + domains[len - 3] + "." + domains[len - 2] + "." + domains[len - 1];
+                // domainName = "." + domains[len - 3] + "." + domains[len - 2] + "." + domains[len - 1]; modify by wuchangzheng
+            	domainName = domains[len - 3] + "." + domains[len - 2] + "." + domains[len - 1];
             } else if (len <= 3 && len > 1) {
                 // xxx.com or xxx.cn
-                domainName = "." + domains[len - 2] + "." + domains[len - 1];
+                // domainName = "." + domains[len - 2] + "." + domains[len - 1]; modify by wucahngzheng
+            	domainName = domains[len - 2] + "." + domains[len - 1];
             } else {
                 domainName = serverName;
             }
@@ -222,6 +237,7 @@ public final class CookieUtils {
             String[] ary = domainName.split("\\:");
             domainName = ary[0];
         }
+        //domainName = domainName.substring(1);
         return domainName;
     }
 
