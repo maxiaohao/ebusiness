@@ -24,27 +24,27 @@
 			<set>
 				<bean class="redis.clients.jedis.HostAndPort">
 					<constructor-arg name="host" value="redis1" />
-					<constructor-arg name="port" value="6379" />
+					<constructor-arg name="port" value="7001" />
 				</bean>
 				<bean class="redis.clients.jedis.HostAndPort">
 					<constructor-arg name="host" value="redis2" />
-					<constructor-arg name="port" value="6379" />
+					<constructor-arg name="port" value="7001" />
 				</bean>
 				<bean class="redis.clients.jedis.HostAndPort">
 					<constructor-arg name="host" value="redis3" />
-					<constructor-arg name="port" value="6379" />
+					<constructor-arg name="port" value="7001" />
 				</bean>
 				<bean class="redis.clients.jedis.HostAndPort">
 					<constructor-arg name="host" value="redis4" />
-					<constructor-arg name="port" value="6379" />
+					<constructor-arg name="port" value="7001" />
 				</bean>
 				<bean class="redis.clients.jedis.HostAndPort">
 					<constructor-arg name="host" value="redis5" />
-					<constructor-arg name="port" value="6379" />
+					<constructor-arg name="port" value="7001" />
 				</bean>
 				<bean class="redis.clients.jedis.HostAndPort">
 					<constructor-arg name="host" value="redis6" />
-					<constructor-arg name="port" value="6379" />
+					<constructor-arg name="port" value="7001" />
 				</bean>
 			</set>
 		</constructor-arg>

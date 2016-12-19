@@ -17,7 +17,7 @@
 				skuid: 1221882,
 				name: '\u957f\u8679\uff08\u0043\u0048\u0041\u004e\u0047\u0048\u004f\u004e\u0047\uff09\u004c\u0045\u0044\u0034\u0032\u0035\u0033\u0038\u0045\u0053\u0020\u0034\u0032\u82f1\u5bf8\u0020\u7a84\u8fb9\u84dd\u5149\u004c\u0045\u0044\u6db2\u6676\u7535\u89c6\uff08\u9ed1\u8272\uff09',
 				skuidkey:'E804B1D153D29E36088A33A134D85EEA',
-				href: 'http://item.jd.com/1221882.html',
+				href: '#',
 				src: 'jfs/t304/157/750353441/93159/e4ee9876/54227256N20d4f5ec.jpg',
 				cat: [737,794,798],
 				brand: 20710,

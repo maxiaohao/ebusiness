@@ -66,7 +66,7 @@
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
-                    <port>8081</port>
+                    <port>80</port>
                     <path>/</path>
                 </configuration>
             </plugin>
